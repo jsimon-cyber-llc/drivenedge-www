@@ -39,6 +39,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
+<!-- Preload the LCP hero image -->
+<link rel="preload" as="image" imagesrcset="assets/img/hero-mobile.jpg 1280w, assets/img/hero.jpg 2560w" imagesizes="100vw" fetchpriority="high">
+
 <!-- Fonts: preconnect + display=swap -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,8 +111,14 @@
   <span id="top"></span>
 
   <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container">
+  <section class="hero hero--cinematic" aria-labelledby="hero-title">
+    <img class="hero__bg" src="assets/img/hero.jpg"
+         srcset="assets/img/hero-mobile.jpg 1280w, assets/img/hero.jpg 2560w" sizes="100vw"
+         alt="A luminous amber edge of light tracing through a dark graphite lattice — software, worked to an edge."
+         width="2560" height="1429" fetchpriority="high" decoding="async">
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <span class="hero__frame" aria-hidden="true"></span>
+    <div class="container hero__content">
       <div class="hero__top">
         <span class="hero__coord">Driven Edge · Software Company</span>
         <span class="hero__coord">United States</span>

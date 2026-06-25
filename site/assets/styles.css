@@ -660,3 +660,89 @@ html.js [data-reveal].is-in{ opacity:1; transform:none; }
   }
   html.js [data-reveal]{ opacity:1 !important; transform:none !important; }
 }
+
+/* =========================================================================
+   CINEMATIC HERO — full-bleed graphite+amber image with instrument chrome
+   overlaid on the left. White headline; the datasheet becomes a dark-glass
+   instrument readout. The signature reticle frames the whole viewport.
+   ========================================================================= */
+.hero--cinematic{
+  position:relative;
+  isolation:isolate;
+  background:var(--ink);
+  color:var(--text-on-dark);
+  overflow:hidden;
+  min-height:clamp(34rem, 82vh, 46rem);
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--rule);
+}
+.hero--cinematic .hero__bg{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:72% 50%;        /* keep the glowing edge toward the right */
+}
+.hero--cinematic .hero__scrim{
+  position:absolute; inset:0; z-index:1;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(14,11,8,0.94) 0%, rgba(14,11,8,0.82) 30%, rgba(14,11,8,0.45) 58%, rgba(14,11,8,0.12) 82%, rgba(14,11,8,0.05) 100%),
+    linear-gradient(0deg, rgba(14,11,8,0.55) 0%, rgba(14,11,8,0) 42%);
+}
+.hero--cinematic .hero__content{ position:relative; z-index:2; width:100%; }
+.hero--cinematic .hero__body{ padding-block:clamp(2.5rem,1.5rem+5vw,4.5rem) clamp(2rem,1rem+4vw,3.5rem); }
+
+/* signature reticle framing the hero viewport (amber, larger arms) */
+.hero--cinematic .hero__frame{ position:absolute; inset:0; z-index:2; pointer-events:none; }
+.hero--cinematic .hero__frame::before,
+.hero--cinematic .hero__frame::after{
+  content:""; position:absolute;
+  width:26px; height:26px;
+  border-color:var(--amber-glow); border-style:solid;
+}
+.hero--cinematic .hero__frame::before{ top:var(--s4); left:var(--s4); border-width:1.5px 0 0 1.5px; }
+.hero--cinematic .hero__frame::after{ bottom:var(--s4); right:var(--s4); border-width:0 1.5px 1.5px 0; }
+
+/* on-dark recolor of the instrument chrome */
+.hero--cinematic .hero__coord{ color:var(--text-on-dark-muted); }
+.hero--cinematic .ruler{
+  border-bottom-color:rgba(244,240,233,0.28);
+  background-image:repeating-linear-gradient(90deg, rgba(244,240,233,0.28) 0 1px, transparent 1px 28px);
+}
+.hero--cinematic .kicker{ color:var(--text-on-dark-muted); }
+.hero--cinematic .kicker .idx{ color:var(--amber-glow); }
+.hero--cinematic .kicker .pip{ box-shadow:0 0 0 3px rgba(234,115,23,0.22); }
+.hero--cinematic h1{ color:#FBF7F0; }
+.hero--cinematic h1 .ink{ color:var(--amber-glow); }
+.hero--cinematic .hero__readout{ color:var(--text-on-dark-muted); }
+.hero--cinematic .hero__lead{ color:#E7E1D7; }
+.hero--cinematic .btn--ghost{ color:var(--text-on-dark); border-color:rgba(244,240,233,0.32); }
+.hero--cinematic .btn--ghost:hover{ color:#fff; border-color:rgba(244,240,233,0.62); background:rgba(255,255,255,0.05); }
+
+/* datasheet as a dark-glass instrument readout */
+.hero--cinematic .datasheet{
+  background:rgba(18,15,11,0.5);
+  -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px);
+  border-color:rgba(244,240,233,0.16);
+  box-shadow:0 12px 40px -16px rgba(0,0,0,0.6);
+}
+.hero--cinematic .datasheet > div{ border-right-color:rgba(244,240,233,0.16); }
+.hero--cinematic .datasheet dt{ color:var(--amber-glow); }
+.hero--cinematic .datasheet dd{ color:#E7E1D7; }
+
+@media (max-width:900px){
+  .hero--cinematic .datasheet > div:nth-child(1),
+  .hero--cinematic .datasheet > div:nth-child(2){ border-bottom-color:rgba(244,240,233,0.16); }
+}
+@media (max-width:720px){
+  .hero--cinematic{ min-height:0; }
+  .hero--cinematic .hero__bg{ object-position:68% 50%; }
+  .hero--cinematic .hero__scrim{
+    background:
+      linear-gradient(90deg, rgba(14,11,8,0.92) 0%, rgba(14,11,8,0.78) 55%, rgba(14,11,8,0.5) 100%),
+      linear-gradient(0deg, rgba(14,11,8,0.7) 0%, rgba(14,11,8,0.1) 50%);
+  }
+  .hero--cinematic .hero__frame::before{ top:var(--s3); left:var(--s3); }
+  .hero--cinematic .hero__frame::after{ bottom:var(--s3); right:var(--s3); }
+}
