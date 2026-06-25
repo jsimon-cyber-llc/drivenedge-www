@@ -787,13 +787,15 @@ html.js [data-reveal].is-in{ opacity:1; transform:none; }
 }
 .cap-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  grid-template-columns:repeat(3, minmax(0,1fr));
   gap:1px;
   background:var(--rule);
   border:1px solid var(--rule);
   border-radius:var(--r-sm);
   overflow:hidden;
 }
+@media (max-width:900px){ .cap-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width:560px){ .cap-grid{ grid-template-columns:1fr; } }
 .cap{
   background:var(--surface);
   padding:var(--s5);
