@@ -746,3 +746,66 @@ html.js [data-reveal].is-in{ opacity:1; transform:none; }
   .hero--cinematic .hero__frame::before{ top:var(--s3); left:var(--s3); }
   .hero--cinematic .hero__frame::after{ bottom:var(--s3); right:var(--s3); }
 }
+
+/* =========================================================================
+   POINT-OF-VIEW band — a confident belief statement
+   ========================================================================= */
+.pov{
+  padding-block:var(--section-y);
+  border-top:1px solid var(--rule);
+  background:var(--bg-sunken);
+}
+.pov__inner{ max-width:54rem; }
+.pov .kicker{ margin-bottom:var(--s4); }
+.pov__statement{
+  font-family:"Fraunces", Georgia, serif;
+  font-weight:500;
+  font-size:clamp(1.6rem, 1.1rem + 2.2vw, 2.65rem);
+  line-height:1.18;
+  letter-spacing:-0.012em;
+  color:var(--text-strong);
+  text-wrap:balance;
+}
+.pov__statement .ink{ color:var(--primary); font-style:italic; }
+.pov__sub{
+  margin-top:var(--s5);
+  max-width:46ch;
+  font-size:var(--t-lead);
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* =========================================================================
+   CAPABILITIES — responsive hairline grid of capability cells
+   ========================================================================= */
+.cap-intro{
+  max-width:52ch;
+  margin-bottom:var(--s6);
+  font-size:var(--t-lead);
+  color:var(--text);
+  line-height:1.6;
+}
+.cap-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+  border-radius:var(--r-sm);
+  overflow:hidden;
+}
+.cap{
+  background:var(--surface);
+  padding:var(--s5);
+  transition:background-color .22s ease;
+}
+.cap:hover{ background:var(--amber-wash); }
+.cap .idx{
+  font-family:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size:var(--t-eyebrow);
+  letter-spacing:0.14em;
+  color:var(--primary);
+  margin-bottom:var(--s4);
+}
+.cap h3{ font-size:var(--t-h3); margin-bottom:var(--s2); max-width:20ch; }
+.cap p{ color:var(--text-muted); font-size:var(--t-body); line-height:1.6; }
