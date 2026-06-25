@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="100%" cy="0%" r="78%">
+      <stop offset="0" stop-color="#EA7317" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#C2410C" stop-opacity="0.13"/>
+      <stop offset="0.7" stop-color="#EA7317" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#16130F"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- faint instrument grid -->
+  <g stroke="#F4F0E9" stroke-opacity="0.045" stroke-width="1">
+    <line x1="300" y1="0" x2="300" y2="630"/><line x1="600" y1="0" x2="600" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/><line x1="0" y1="420" x2="1200" y2="420"/>
+  </g>
+
+  <!-- corner registration reticles (signature) -->
+  <g stroke="#EA7317" stroke-width="2.5" fill="none">
+    <path d="M44 66 L44 44 L66 44"/>
+    <path d="M1156 66 L1156 44 L1134 44"/>
+    <path d="M44 564 L44 586 L66 586"/>
+    <path d="M1156 564 L1156 586 L1134 586"/>
+  </g>
+
+  <!-- mark + wordmark -->
+  <g transform="translate(78,84) scale(0.78)">
+    <rect width="64" height="64" rx="15" fill="#211C16"/>
+    <path d="M20 16 L20 48 L34 48 C44 48 50 41 50 32 C50 23 44 16 34 16 Z" fill="none" stroke="#FAF8F4" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M44 32 L52 28 L52 36 Z" fill="#EA7317"/>
+  </g>
+  <text x="138" y="124" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="34" fill="#FAF8F4">Driven Edge</text>
+  <text x="1134" y="118" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="18" letter-spacing="3" fill="#C8C0B4">SOFTWARE COMPANY · USA</text>
+
+  <!-- headline -->
+  <text x="76" y="336" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="94" letter-spacing="-1" fill="#FAF8F4">We build software</text>
+  <text x="76" y="438" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-style="italic" font-size="94" letter-spacing="-1" fill="#EA7317">worth keeping.</text>
+
+  <!-- bottom mono row -->
+  <text x="78" y="556" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="19" letter-spacing="3" fill="#C8C0B4">DESIGN · BUILD · MAINTAIN</text>
+  <text x="1134" y="556" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="19" letter-spacing="1" fill="#8C8377">drivenedge.net</text>
+</svg>

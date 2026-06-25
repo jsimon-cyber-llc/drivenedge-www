@@ -80,4 +80,10 @@
   --e3: 0 24px 60px -20px rgba(22,19,15,0.18), 0 2px 6px rgba(22,19,15,0.06);
 
   --header-h: 4.5rem;
+
+  /* instrument / spec-sheet system */
+  --rule:        #DCD5C9;   /* structural hairline grid (slightly stronger than --hairline) */
+  --rule-strong: #C7BEAF;
+  --reticle:     var(--amber);
+  --tick:        9px;       /* corner registration-mark arm length */
 }
