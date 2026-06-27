@@ -748,6 +748,18 @@ html.js [data-reveal].is-in{ opacity:1; transform:none; }
 }
 
 /* =========================================================================
+   DIAGRAMS — inline SVG figures (reference architecture + engagement model)
+   Scale to container width; horizontal-scroll on small screens so labels
+   stay legible rather than shrinking to nothing.
+   ========================================================================= */
+.diagram-fig{ margin:var(--s6) 0 0; }
+.diagram{ width:100%; height:auto; display:block; }
+@media (max-width:768px){
+  .diagram-fig{ overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--rule); border-radius:var(--r-sm); }
+  .diagram{ min-width:700px; }
+}
+
+/* =========================================================================
    POINT-OF-VIEW band — a confident belief statement
    ========================================================================= */
 .pov{
