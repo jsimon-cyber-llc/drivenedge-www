@@ -20,6 +20,9 @@ https://drivenedge.net.
 - **Never self-limit**: no geography / "based in" / jurisdiction, and no size words
   ("studio", "software studio", "small studio/team/company"). The only "LLC" allowed is
   the tiny footer copyright + the JSON-LD `legalName`.
+- **Audience is B2B / enterprise** (we serve organizations, not consumers) — but **never
+  write the word "B2B" or "business-to-business" on the site**; it's jargon. Address the
+  buyer *implicitly*: "organizations", "your teams", "the systems you run", "enterprises".
 - **Honest**: invent no clients, metrics, headcount, awards, or scale.
 
 ## Voice
